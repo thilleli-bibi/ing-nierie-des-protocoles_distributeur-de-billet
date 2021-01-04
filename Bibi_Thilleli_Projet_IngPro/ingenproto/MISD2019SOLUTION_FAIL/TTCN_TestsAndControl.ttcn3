@@ -1,0 +1,183 @@
+module TTCN_TestsAndControl
+  {
+  import from TTCN_Declarations all;
+
+  import from TTCN_Templates all;
+
+
+  altstep RTDS_fail() runs on runsOn_atmsys
+    {
+    []cardchan.receive
+      {
+      setverdict(fail, "Fail in default altstep!");
+      stop;
+      };
+    }
+
+  testcase TC_1b() runs on runsOn_atmsys system atmsys
+    {
+    activate(RTDS_fail());
+    map(self:cardchan, system:cardchan);
+    cardchan.send(insertcard_tr2dMSG1);
+    cardchan.send(insertcode_tr2dMSG2);
+    cardchan.send(credit_1bMSG3);
+    cardchan.receive(creditamount_1bMSG4);
+    cardchan.send(credita_1bMSG5);
+    cardchan.receive(creditreceipt_1bMSG6);
+    cardchan.receive(OKop_tr2dMSG10);
+    cardchan.send(OKcancel_tr2dMSG22);
+    cardchan.send(cancelop_tr2dMSG20);
+    cardchan.receive(cancelopquestion_tr2dMSG21);
+    cardchan.send(OKcancel_tr2dMSG22);
+    cardchan.receive(returncard_1bMSG12);
+    setverdict(pass);
+    }
+
+  testcase TC_Tr1() runs on runsOn_atmsys system atmsys
+    {
+    activate(RTDS_fail());
+    map(self:cardchan, system:cardchan);
+    cardchan.send(insertcard_tr2dMSG1);
+    cardchan.send(insertcode_Tr1MSG2);
+    cardchan.receive(errorcode_Tr1MSG3);
+    cardchan.send(insertcode_tr2dMSG2);
+    cardchan.send(credit_1bMSG3);
+    cardchan.receive(creditamount_1bMSG4);
+    cardchan.send(credita_Tr1MSG7);
+    cardchan.receive(creditreceipt_1bMSG6);
+    cardchan.receive(OKop_tr2dMSG10);
+    cardchan.send(cancelop_tr2dMSG20);
+    cardchan.receive(cancelopquestion_tr2dMSG21);
+    cardchan.send(OKcancel_tr2dMSG22);
+    cardchan.receive(returncard_1bMSG12);
+    setverdict(pass);
+    }
+
+  testcase TC_Tr2() runs on runsOn_atmsys system atmsys
+    {
+    activate(RTDS_fail());
+    map(self:cardchan, system:cardchan);
+    cardchan.send(insertcard_tr2dMSG1);
+    cardchan.send(insertcode_tr2dMSG2);
+    cardchan.send(debit_tr2dMSG3);
+    cardchan.receive(debitamount_tr2dMSG4);
+    cardchan.send(a50_Tr2MSG5);
+    cardchan.send(numberbanknotes_tr2dMSG6);
+    cardchan.receive(debitreceipt_tr2dMSG9);
+    cardchan.receive(OKop_tr2dMSG10);
+    cardchan.send(cancelop_tr2dMSG20);
+    cardchan.receive(cancelopquestion_tr2dMSG21);
+    cardchan.send(OKcancel_tr2dMSG22);
+    cardchan.receive(returncard_1bMSG12);
+    setverdict(pass);
+    }
+
+  testcase TC_Tr3() runs on runsOn_atmsys system atmsys
+    {
+    activate(RTDS_fail());
+    map(self:cardchan, system:cardchan);
+    cardchan.send(insertcard_tr2dMSG1);
+    cardchan.send(insertcode_Tr1MSG2);
+    cardchan.receive(errorcode_Tr1MSG3);
+    cardchan.send(insertcode_tr2dMSG2);
+    cardchan.send(debit_tr2dMSG3);
+    cardchan.receive(debitamount_tr2dMSG4);
+    cardchan.send(a50_Tr2MSG5);
+    cardchan.send(numberbanknotes_tr2dMSG6);
+    cardchan.receive(debitreceipt_tr2dMSG9);
+    cardchan.receive(OKop_tr2dMSG10);
+    cardchan.send(debit_tr2dMSG3);
+    cardchan.receive(debitamount_tr2dMSG4);
+    cardchan.send(a100_Tr3MSG13);
+    cardchan.send(numberbanknotes_tr2dMSG14);
+    cardchan.receive(debitreceipt_tr2dMSG9);
+    cardchan.receive(OKop_tr2dMSG10);
+    cardchan.send(debit_tr2dMSG3);
+    cardchan.receive(debitamount_tr2dMSG4);
+    cardchan.send(a20_tr2dMSG13);
+    cardchan.send(numberbanknotes_Tr3MSG20);
+    cardchan.receive(debitreceipt_tr2dMSG9);
+    cardchan.receive(OKop_tr2dMSG10);
+    cardchan.send(debit_tr2dMSG3);
+    cardchan.receive(debitamount_tr2dMSG4);
+    cardchan.send(a10_tr2dMSG5);
+    cardchan.send(numberbanknotes_tr2dMSG14);
+    cardchan.receive(debitreceipt_tr2dMSG9);
+    cardchan.receive(OKop_tr2dMSG10);
+    cardchan.send(cancelop_tr2dMSG20);
+    cardchan.receive(cancelopquestion_tr2dMSG21);
+    cardchan.send(OKcancel_tr2dMSG22);
+    cardchan.receive(returncard_1bMSG12);
+    setverdict(pass);
+    }
+
+  testcase TC_tr2d_tr3vFAIL() runs on runsOn_atmsys system atmsys
+    {
+    activate(RTDS_fail());
+    map(self:cardchan, system:cardchan);
+    cardchan.send(insertcard_tr2dMSG1);
+    cardchan.send(insertcode_tr2dMSG2);
+    cardchan.send(debit_tr2dMSG3);
+    cardchan.receive(debitamount_tr2dMSG4);
+    cardchan.send(a10_tr2dMSG5);
+    cardchan.send(numberbanknotes_tr2dMSG6);
+    cardchan.receive(bknote10_tr2dMSG7);
+    cardchan.receive(bknote10_tr2dMSG7);
+    cardchan.receive(debitreceipt_tr2dMSG9);
+    cardchan.receive(OKop_tr2dMSG10);
+    cardchan.send(debit_tr2dMSG3);
+    cardchan.receive(debitamount_tr2dMSG4);
+    cardchan.send(a20_tr2dMSG13);
+    cardchan.send(numberbanknotes_tr2dMSG14);
+    cardchan.receive(bknote20_tr2dMSG15);
+    cardchan.receive(bknote20_tr2dMSG15);
+    alt {
+      []cardchan.receive(bknote20_tr2dMSG15) {
+        cardchan.receive(debitreceipt_tr2dMSG9);
+        cardchan.receive(OKop_tr2dMSG10);
+        cardchan.send(cancelop_tr2dMSG20);
+        cardchan.receive(cancelopquestion_tr2dMSG21);
+        cardchan.send(OKcancel_tr2dMSG22);
+        }
+      []cardchan.receive(debitreceipt_tr2dMSG9) {
+        cardchan.receive(OKop_tr2dMSG10);
+        cardchan.send(cancelop_tr2dMSG20);
+        cardchan.receive(cancelopquestion_tr2dMSG21);
+        cardchan.send(OKcancel_tr2dMSG22);
+        cardchan.receive(returncard_1bMSG12);
+        }
+      }
+    setverdict(pass);
+    }
+
+  testcase TC_Tr2strange() runs on runsOn_atmsys system atmsys
+    {
+    activate(RTDS_fail());
+    map(self:cardchan, system:cardchan);
+    cardchan.send(insertcard_tr2dMSG1);
+    cardchan.send(insertcode_Tr1MSG2);
+    cardchan.receive(errorcode_Tr1MSG3);
+    cardchan.send(insertcode_tr2dMSG2);
+    cardchan.send(debit_tr2dMSG3);
+    cardchan.receive(debitamount_tr2dMSG4);
+    cardchan.send(a50_Tr2MSG5);
+    cardchan.send(numberbanknotes_Tr2strangeMSG8);
+    cardchan.receive(debitreceipt_tr2dMSG9);
+    cardchan.receive(OKop_tr2dMSG10);
+    cardchan.send(cancelop_tr2dMSG20);
+    cardchan.receive(cancelopquestion_tr2dMSG21);
+    cardchan.send(OKcancel_tr2dMSG22);
+    cardchan.receive(returncard_1bMSG12);
+    setverdict(pass);
+    }
+
+  control
+    {
+    execute(TC_1b());
+    execute(TC_Tr1());
+    execute(TC_Tr2());
+    execute(TC_Tr3());
+    execute(TC_tr2d_tr3vFAIL());
+    execute(TC_Tr2strange());
+    }
+  }

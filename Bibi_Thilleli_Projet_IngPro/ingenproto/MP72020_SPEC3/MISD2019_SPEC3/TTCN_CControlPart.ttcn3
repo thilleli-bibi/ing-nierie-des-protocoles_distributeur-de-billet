@@ -1,0 +1,12 @@
+module TTCN_CControlPart {
+
+  import from TTCN_TestsAndControl all;
+
+
+  control
+    {
+    execute(TC_a());
+    execute(TC_b());
+    execute(TC_errorcode());
+    }
+  }

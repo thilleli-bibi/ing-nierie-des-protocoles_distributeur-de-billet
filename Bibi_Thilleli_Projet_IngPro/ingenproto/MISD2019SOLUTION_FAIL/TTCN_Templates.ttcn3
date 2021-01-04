@@ -1,0 +1,48 @@
+module TTCN_Templates {
+
+  import from TTCN_Declarations all;
+
+  template a20 a20_tr2dMSG13 := ?;
+  template numberbanknotes numberbanknotes_Tr2strangeMSG8 := {
+    param1 := 34
+  };
+  template numberbanknotes numberbanknotes_Tr3MSG20 := {
+    param1 := 5
+  };
+  template numberbanknotes numberbanknotes_tr2dMSG14 := {
+    param1 := 3
+  };
+  template numberbanknotes numberbanknotes_tr2dMSG6 := {
+    param1 := 2
+  };
+  template OKcancel OKcancel_tr2dMSG22 := ?;
+  template bknote20 bknote20_tr2dMSG15 := ?;
+  template cancelopquestion cancelopquestion_tr2dMSG21 := ?;
+  template OKop OKop_tr2dMSG10 := ?;
+  template returncard returncard_1bMSG12 := ?;
+  template cancelop cancelop_tr2dMSG20 := ?;
+  template errorcode errorcode_Tr1MSG3 := ?;
+  template a50 a50_Tr2MSG5 := ?;
+  template debit debit_tr2dMSG3 := ?;
+  template insertcard insertcard_tr2dMSG1 := ?;
+  template credita credita_1bMSG5 := {
+    param1 := 123
+  };
+  template credita credita_Tr1MSG7 := {
+    param1 := 71811034
+  };
+  template a10 a10_tr2dMSG5 := ?;
+  template insertcode insertcode_Tr1MSG2 := {
+    param1 := 0
+  };
+  template insertcode insertcode_tr2dMSG2 := {
+    param1 := 1234
+  };
+  template bknote10 bknote10_tr2dMSG7 := ?;
+  template creditreceipt creditreceipt_1bMSG6 := ?;
+  template debitamount debitamount_tr2dMSG4 := ?;
+  template a100 a100_Tr3MSG13 := ?;
+  template creditamount creditamount_1bMSG4 := ?;
+  template credit credit_1bMSG3 := ?;
+  template debitreceipt debitreceipt_tr2dMSG9 := ?;
+}

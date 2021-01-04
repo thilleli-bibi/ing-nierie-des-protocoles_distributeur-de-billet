@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<MscDiagram message_params_visibility="full">
+<LifelineOrdering identifiers="LIFELINEID_1 LIFELINEID_2"/>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="PROCESS_START" color="#000000" text="atmproc
+(1)" text_size="0 -" background="-"/>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="PROCESS_START" color="#000000" text="RTDS_Env
+(-1)" text_size="0 -" background="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM2" identifier="COND1" background="-" text="idle"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="idle" identifier="COND1" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="insertcard" identifier="MSG1"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM3" identifier="MSG1" text="insertcard"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="#ffffff" text="tempo(60)" type="-" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM113"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM4" identifier="COND2" background="-" text="waitcode"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="waitcode" identifier="COND2" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="insertcode(|{param1|=0|})" identifier="MSG2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM5" identifier="MSG2" text="insertcode(|{param1|=0|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_CANCEL" color="#ffffff" text="tempo" type="-" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM118"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM9" identifier="MSG3" text="errorcode()"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="errorcode()" identifier="MSG3"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM18" identifier="COND3" background="-" text="waitcode"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="waitcode" identifier="COND3" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM18"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="insertcode(|{param1|=1234|})" identifier="MSG4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM5" identifier="MSG4" text="insertcode(|{param1|=1234|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM19" identifier="COND4" background="-" text="whataction"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="whataction" identifier="COND4" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM19"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="debit" identifier="MSG5"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM26" identifier="MSG5" text="debit"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM82" identifier="MSG6" text="debitamount()"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="debitamount()" identifier="MSG6"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM28" identifier="COND5" background="-" text="whatamountd"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="whatamountd" identifier="COND5" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM28"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="a50" identifier="MSG7"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM97" identifier="MSG7" text="a50"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM99" identifier="COND6" background="-" text="howmanybk"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="howmanybk" identifier="COND6" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM99"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="numberbanknotes(|{param1|=34|})" identifier="MSG8"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM107" identifier="MSG8" text="numberbanknotes(|{param1|=34|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/debitproc.rdd*SYM4" identifier="MSG9" text="debitreceipt()"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="debitreceipt()" identifier="MSG9"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM109" identifier="MSG10" text="OKop()"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="OKop()" identifier="MSG10"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM110" identifier="COND7" background="-" text="whataction"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="whataction" identifier="COND7" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM110"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="cancelop" identifier="MSG11"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM22" identifier="MSG11" text="cancelop"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM55" identifier="MSG12" text="cancelopquestion()"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="cancelopquestion()" identifier="MSG12"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM24" identifier="COND8" background="-" text="wait4confcancel"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="wait4confcancel" identifier="COND8" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM24"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="OKcancel" identifier="MSG13"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM56" identifier="MSG13" text="OKcancel"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM57" identifier="MSG14" text="returncard()"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="returncard()" identifier="MSG14"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM58" identifier="COND9" background="-" text="idle"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="idle" identifier="COND9" model_id="PragmaDevStudio:symbol*/home/lydia/Projet_inginierie/inginierie des protocole/MP72020BASIS/MISD2019BASIS/atmproc.rdd*SYM58"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE" scaleFactor="1.0"/>
+</MscDiagram>

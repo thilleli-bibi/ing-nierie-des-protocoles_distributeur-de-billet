@@ -1,0 +1,75 @@
+module TTCN_TestsAndControl
+  {
+  import from TTCN_Declarations all;
+
+  import from TTCN_Templates all;
+
+
+  altstep RTDS_fail() runs on runsOn_atmsys
+    {
+    []cardchan.receive
+      {
+      setverdict(fail, "Fail in default altstep!");
+      stop;
+      };
+    }
+
+  testcase TC_a() runs on runsOn_atmsys system atmsys
+    {
+    activate(RTDS_fail());
+    map(self:cardchan, system:cardchan);
+    cardchan.send(insertcard_aMSG1);
+    cardchan.send(insertcode_aMSG2);
+    cardchan.send(debit_aMSG3);
+    cardchan.receive(debitamount_aMSG4);
+    cardchan.send(a10_aMSG5);
+    cardchan.send(numberbanknotes_aMSG6);
+    cardchan.receive(bknote10_aMSG7);
+    cardchan.receive(bknote10_aMSG7);
+    cardchan.receive(debitreceipt_aMSG9);
+    cardchan.receive(OKop_aMSG10);
+    cardchan.send(cancelop_aMSG11);
+    cardchan.receive(cancelopquestion_aMSG12);
+    cardchan.send(OKcancel_aMSG13);
+    cardchan.receive(returncard_aMSG14);
+    setverdict(pass);
+    }
+
+  testcase TC_b() runs on runsOn_atmsys system atmsys
+    {
+    activate(RTDS_fail());
+    map(self:cardchan, system:cardchan);
+    cardchan.send(insertcard_aMSG1);
+    cardchan.send(insertcode_aMSG2);
+    cardchan.send(debit_aMSG3);
+    cardchan.receive(debitamount_aMSG4);
+    cardchan.send(a50_bMSG5);
+    cardchan.send(numberbanknotes_bMSG6);
+    cardchan.receive(bknote50_bMSG7);
+    cardchan.receive(debitreceipt_aMSG9);
+    cardchan.receive(OKop_aMSG10);
+    cardchan.send(cancelop_aMSG11);
+    cardchan.receive(cancelopquestion_aMSG12);
+    cardchan.send(OKcancel_aMSG13);
+    setverdict(pass);
+    }
+
+  testcase TC_errorcode() runs on runsOn_atmsys system atmsys
+    {
+    activate(RTDS_fail());
+    map(self:cardchan, system:cardchan);
+    cardchan.send(insertcard_aMSG1);
+    cardchan.send(insertcode_errorcodeMSG2);
+    cardchan.receive(errorcode_errorcodeMSG3);
+    cardchan.send(insertcode_errorcodeMSG2);
+    cardchan.receive(errorcode_errorcodeMSG3);
+    setverdict(pass);
+    }
+
+  control
+    {
+    execute(TC_a());
+    execute(TC_b());
+    execute(TC_errorcode());
+    }
+  }
